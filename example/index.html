@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap自动补全示例</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bootstrap.autocomplete.js"></script>
+</head>
+<body>
+<div class="container" style="padding-top: 40px">
+    <input class="form-control" type="text" id="test" autocomplete="off"/>
+</div>
+<script>
+    var filterDatas = [];
+    filterDatas.push({name: '周杰伦'});
+    filterDatas.push({name: '周树人'});
+    filterDatas.push({name: '林俊杰'});
+    filterDatas.push({name: '新垣结衣'});
+    filterDatas.push({name: '袁隆平'});
+    filterDatas.push({name: '周星驰'});
+    filterDatas.push({name: '吴孟达'});
+    $('#test').bootstrapAutocomplete(filterDatas, function (respData) {
+        console.log(respData);
+    });
+</script>
+</body>
+</html>
